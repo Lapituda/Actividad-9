@@ -17,3 +17,5 @@
 
 ## Cuando un usuario inicia sesión, debe enviar un correo electrónico de alerta de inicio de sesión.
 ![image](https://github.com/Lapituda/Actividad-9/assets/102392241/eb04a694-f340-44e9-bbfe-9eb34638da3c)
+
+![image](https://github.com/Lapituda/Actividad-9/assets/102392241/4c50aad0-bbba-4958-b75c-2396f1d7985c)
