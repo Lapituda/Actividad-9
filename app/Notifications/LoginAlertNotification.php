@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Notifications\LoginAlertNotification;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -11,6 +12,10 @@ class LoginAlertNotification extends Notification
 {
     use Queueable;
 
+    protected function authenticated(Request $request, $user)
+    {
+        $user->notify(new LoginAlertNotification($user));
+    }
     /**
      * Create a new notification instance.
      */

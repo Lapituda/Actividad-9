@@ -11,12 +11,16 @@ class WelcomeNotification extends Notification
 {
     use Queueable;
 
+    protected $name;
+    protected $email;
+
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct($name, $email)
     {
-        //
+        $this->name = $name;
+        $this->email = $email;
     }
 
     /**
@@ -24,7 +28,7 @@ class WelcomeNotification extends Notification
      *
      * @return array<int, string>
      */
-    public function via(object $notifiable): array
+    public function via($notifiable): array
     {
         return ['mail'];
     }
@@ -32,12 +36,16 @@ class WelcomeNotification extends Notification
     /**
      * Get the mail representation of the notification.
      */
-    public function toMail(object $notifiable): MailMessage
+    public function toMail($notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('¡Bienvenido a nuestra aplicación!')
+            ->line('Hola ' . $this->name . ',')
+            ->line('Gracias por registrarte en nuestra aplicación.')
+            ->line('¡Esperamos que disfrutes tu experiencia!')
+            ->action('Ir al sitio web', url('/'))
+            ->line('¡Gracias!')
+            ->from('your@example.com', 'Tu Nombre');
     }
 
     /**
@@ -45,7 +53,7 @@ class WelcomeNotification extends Notification
      *
      * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toArray($notifiable): array
     {
         return [
             //
