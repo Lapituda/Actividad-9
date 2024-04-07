@@ -10,3 +10,10 @@
 ![image](https://github.com/Lapituda/Actividad-9/assets/102392241/09a18148-dda3-4bfe-8a89-56eb276a0a12)
 
 
+# TAREA 8
+
+## Al registrar un usuario, este deberá enviar un correo electrónico de bienvenida.
+![image](https://github.com/Lapituda/Actividad-9/assets/102392241/3c3fc5cd-44c5-44a2-8eee-a5eac2244d55)
+
+## Cuando un usuario inicia sesión, debe enviar un correo electrónico de alerta de inicio de sesión.
+![image](https://github.com/Lapituda/Actividad-9/assets/102392241/eb04a694-f340-44e9-bbfe-9eb34638da3c)
